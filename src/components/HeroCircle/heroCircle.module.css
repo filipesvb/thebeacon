@@ -1,0 +1,13 @@
+.light-circle {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  background: repeating-radial-gradient(
+    circle at 50%,
+    yellow,
+    yellow 20px,
+    orange 20px,
+    orange 40px
+  );
+  border-radius: 50%;
+}
