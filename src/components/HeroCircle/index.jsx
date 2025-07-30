@@ -5,7 +5,7 @@ import styles from "./heroCircle.module.css";
 const CIRCLE_COLORS = ["#FFCC00", "#FFDD53"]; // alternância de cores
 
 const HeroCircle = () => {
-  const [layers, setLayers] = useState(1);
+  const [layers, setLayers] = useState(0);
   const [isGrowing, setIsGrowing] = useState(false);
 
   const maxLayers = 21;
@@ -16,7 +16,12 @@ const HeroCircle = () => {
     setIsGrowing(true);
 
     setTimeout(() => {
-      setLayers((prev) => prev + 1);
+      console.log(e.deltaY);
+      if (e.deltaY < 0) {
+        setLayers((prev) => prev - 1);
+      } else {
+        setLayers((prev) => Math.max(prev + 1, 0));
+      }
       setIsGrowing(false);
     }, 100); // tempo da animação
   };
@@ -34,7 +39,9 @@ const HeroCircle = () => {
     window.addEventListener("wheel", handleScroll, { passive: false });
     console.log(layers);
 
-    document.body.style.overflow = "hidden";
+    if (window.scrollY == 0) {
+      document.body.style.overflow = "hidden";
+    }
 
     return () => {
       window.removeEventListener("wheel", handleScroll);

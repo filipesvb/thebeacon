@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${archivoBlack.variable} ${archivoBlack.variable} antialiased h-full `}
       >
-        <div className="app-container">{children}</div>
+        <div className="app-container max-w-[1220px] m-auto">{children}</div>
       </body>
     </html>
   );
