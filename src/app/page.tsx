@@ -1,15 +1,17 @@
-import Link from "next/link";
 import styles from "./page.module.css";
 import HeroCircle from "../components/HeroCircle";
 import TheBeacon from "../components/TheBeacon";
 import { ArrowBottom } from "../components/ArrowBottom";
 import { LinkButton } from "../components/LinkButton";
+import HeaderMobile from "../components/HeaderMobile";
+import { archivoBlack } from "./layout";
+import { Services } from "../components/Services";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className={`${archivoBlack.className}`}>
       <section className={styles["top"]}>
-        <div className={styles.center}>
+        <div className="max-w-[1360px] m-auto ">
           <video autoPlay loop muted>
             <source src="/nuvens.mp4" />
           </video>
@@ -63,7 +65,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-full h-full z-[-10]">
                 <div className="relative w-full top-0 left-0 h-full  ">
                   <TheBeacon />
-                  <HeroCircle />
+                  {/* <HeroCircle /> */}
                 </div>
               </div>
               <div className="w-[115%]">
@@ -71,9 +73,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Hero CTA section */}
+          <div>
+            <h2 className="text-white text-2xl">
+              Erga um farol, e veja o seu negócio brilhar
+            </h2>
+          </div>
         </div>
       </section>
-      <section className="sobre relative text-justify bg-black text-white text-[17px] py-4 flex items-center justify-between px-10 pb-20">
+      <section className=" sobre relative text-justify bg-black text-white text-[17px] py-4 flex items-center justify-between pb-20">
         <p className="max-w-160 mb-2">
           The Beacon® é uma agência de desenvolvimento web sediada em Amparo-SP,
           especializada em soluções digitais personalizadas. Unimos design
@@ -88,6 +96,8 @@ export default function Home() {
           <ArrowBottom />
         </div>
       </section>
+      <Services />
+      <HeaderMobile />
     </main>
   );
 }

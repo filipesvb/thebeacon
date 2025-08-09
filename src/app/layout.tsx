@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Archivo_Black } from "next/font/google";
+import { Archivo_Black } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const archivoBlack = Archivo_Black({
-  variable: "--font-archivo-black",
+export const archivoBlack = Archivo_Black({
   weight: ["400"],
   subsets: ["latin"],
 });
@@ -31,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="h-full">
       <body
-        className={`${archivoBlack.variable} ${archivoBlack.variable} antialiased h-full `}
+        className={`${archivoBlack.className} ${archivoBlack.className} antialiased h-full `}
       >
         <div className="app-container max-w-[1220px] m-auto">{children}</div>
       </body>
