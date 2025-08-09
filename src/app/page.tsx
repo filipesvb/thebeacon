@@ -4,7 +4,7 @@ import TheBeacon from "../components/TheBeacon";
 import { ArrowBottom } from "../components/ArrowBottom";
 import { LinkButton } from "../components/LinkButton";
 import HeaderMobile from "../components/HeaderMobile";
-import { archivoBlack } from "./layout";
+import { archivoBlack, outfit } from "./fonts";
 import { Services } from "../components/Services";
 
 export default function Home() {
@@ -75,14 +75,14 @@ export default function Home() {
           </div>
           {/* Hero CTA section */}
           <div>
-            <h2 className="text-white text-2xl">
+            <h2 className="text-white text-2xl pl-2">
               Erga um farol, e veja o seu negócio brilhar
             </h2>
           </div>
         </div>
       </section>
-      <section className=" sobre relative text-justify bg-black text-white text-[17px] py-4 flex items-center justify-between pb-20">
-        <p className="max-w-160 mb-2">
+      <section className=" sobre relative text-justify bg-black text-white text-[17px] py-4 flex gap-2 pr-2 items-center justify-between pb-20">
+        <p className={`${outfit.className} w-100 mb-2 pl-2`}>
           The Beacon® é uma agência de desenvolvimento web sediada em Amparo-SP,
           especializada em soluções digitais personalizadas. Unimos design
           criativo, tecnologia e estratégia para transformar a presença online

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ServicesTitle } from "@/components/ServicesTitle";
+import { outfit } from "../../app/fonts";
 
 export const Services = () => {
   return (
@@ -21,7 +22,7 @@ export const Services = () => {
           </div>
         </div>
         <div className="bg-black px-2 py-4 text-justify">
-          <p>
+          <p className={`${outfit.className} text-white`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor sapien libero, eget tincidunt mi porta vitae. Mauris
             vestibulum, eros quis dictum finibus, nisi leo faucibus neque, sit
